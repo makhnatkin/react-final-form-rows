@@ -1,0 +1,25 @@
+{
+  "name": "final-form-rows",
+  "version": "1.0.0",
+  "description": "An alternative to the final-form-arrays library using normalized data instead of an array",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makhnatkin/final-form-rows.git"
+  },
+  "keywords": [
+    "final-form",
+    "final-form-arrays",
+    "react-final-form",
+    "react-final-form-arrays"
+  ],
+  "author": "Sergey Makhnatkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makhnatkin/final-form-rows/issues"
+  },
+  "homepage": "https://github.com/makhnatkin/final-form-rows#readme"
+}
