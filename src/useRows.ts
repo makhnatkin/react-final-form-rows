@@ -70,7 +70,7 @@ export function useRows<RowType extends string = string, RowFields extends {} = 
     }, [generate]);
 
     const remove = useCallback(
-        (deletingRow) => {
+        (deletingRow: string) => {
             setRows((currentRows) => currentRows.filter((item) => item !== deletingRow));
             change(deletingRow, null);
         },
@@ -87,7 +87,7 @@ export function useRows<RowType extends string = string, RowFields extends {} = 
     const swap = useCallback(() => {}, []);
 
     const unshift = useCallback(
-        (newRow = generate(), values) => {
+        (newRow = generate(), values: any) => {
             setRows((currentRows) => [newRow, ...currentRows]);
             if (values) {
                 change(newRow, values);
@@ -101,7 +101,7 @@ export function useRows<RowType extends string = string, RowFields extends {} = 
     }, []);
 
     const copy = useCallback(
-        (row, newRow = generate(), position = 0) => {
+        (row: string, newRow = generate(), position = 0) => {
             // TODO: @makhnatkin check insert position logic
             setRows((currentRows) => {
                 const copiedIndex = position || currentRows.findIndex((item) => item === row);
@@ -114,7 +114,7 @@ export function useRows<RowType extends string = string, RowFields extends {} = 
         [change, generate, getState],
     );
 
-    const drag = useCallback((dragRow, hoverRow) => {
+    const drag = useCallback((dragRow: string, hoverRow: string) => {
         setRows((currentRows) => {
             const updatedRows = [...currentRows];
             const dragIndex = updatedRows.findIndex((row) => row === dragRow);
@@ -139,7 +139,7 @@ export function useRows<RowType extends string = string, RowFields extends {} = 
         return dirtyRef.current;
     }, []);
 
-    const getRowIndex = useCallback((row) => rowsRef.current.findIndex((item) => item === row), []);
+    const getRowIndex = useCallback((row: string) => rowsRef.current.findIndex((item) => item === row), []);
 
     return {
         rows,

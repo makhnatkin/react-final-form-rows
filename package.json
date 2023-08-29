@@ -1,10 +1,20 @@
 {
-  "name": "final-form-rows",
+  "name": "react-final-form-rows",
   "version": "1.0.0",
   "description": "An alternative to the final-form-arrays library using normalized data instead of an array",
-  "main": "index.js",
+  "types": "lib/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "files": [
+    "lib/"
+  ],
   "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "build:watch": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
@@ -21,5 +31,14 @@
   "bugs": {
     "url": "https://github.com/makhnatkin/final-form-rows/issues"
   },
-  "homepage": "https://github.com/makhnatkin/final-form-rows#readme"
+  "homepage": "https://github.com/makhnatkin/final-form-rows#readme",
+  "dependencies": {
+    "final-form": "^4.20.10",
+    "react": "^18.2.0",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.21",
+    "typescript": "^5.2.2"
+  }
 }
