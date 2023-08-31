@@ -6,9 +6,10 @@ Almost te same https://final-form.org/docs/final-form-arrays/api
 
 ## Examples
 
-### Base example
-// TODO: ...
-
 ### Draggable example
-// TODO: ...
+https://codesandbox.io/s/react-final-form-rows-field-array-alternative-react-dnd-as-drag-drop-6vrpy6
+
+Pay attention to the re-renders that occur only when adding a string. This happens because the array index is not recalculated. This approach also helps to solve other problems related to using the unshift method, for example.
+
+![ezgif-4-9aa3917cd0](https://github.com/makhnatkin/react-final-form-rows/assets/1963954/e62df33c-f73f-46b3-a827-376d59168dc7)
 
