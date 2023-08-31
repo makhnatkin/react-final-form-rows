@@ -1,5 +1,7 @@
 ## React Final Form Rows
 An alternative to the [final-form-arrays](https://github.com/final-form/final-form-arrays) library using normalized data instead of an array
+https://github.com/final-form/react-final-form/issues/336#issuecomment-1700237076
+https://github.com/final-form/final-form-arrays/pull/96
 
 ## API
 Almost te same https://final-form.org/docs/final-form-arrays/api
